@@ -12,19 +12,17 @@ mockedAxios.get.mockImplementation((url) => {
 });
 describe("Calc component", () => {
   it("should render", () => {
-    // act(() => {
     const { getByTestId } = render(<Calc />);
     expect(getByTestId("coisa")).toBeTruthy();
-    // });
   });
 
-  //   it("should have value 4", async () => {
-  //     // mockedAxios.get.mockResolvedValueOnce({ data: 4 });
+  it("should have value 4", async () => {
+    // mockedAxios.get.mockResolvedValueOnce({ data: 4 });
 
-  //     const { findByText, getByText, debug } = render(<Calc />);
-  //     debug();
-  //     await waitFor(() => {
-  //       expect(getByText("4")).toBeInTheDocument();
-  //     });
-  //   });
+    const { findByText, getByText, debug } = render(<Calc />);
+    debug();
+    await waitFor(() => {
+      expect(getByText("4")).toBeInTheDocument();
+    });
+  });
 });
