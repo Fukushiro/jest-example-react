@@ -23,7 +23,7 @@ const Calc: React.FC = () => {
   }
   useEffect(() => {
     makeMath();
-  });
+  }, []);
   return (
     <div>
       <h1 data-testid={"coisa"}>{result}</h1>
